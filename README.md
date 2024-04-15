@@ -5,11 +5,15 @@ This project is a clone of the YouTube front page, designed using HTML, CSS, and
 **Table of Contents**
 
 Demo
+
 Features
+
 Installation
+
 Usage
+
 Credits
-License
+
 Demo
 ![Youtube](https://github.com/FLASH2332/YOUTUBE/assets/148314235/2782d1b2-0e2c-45ea-9b9f-1f68a4c8c1df)
 
