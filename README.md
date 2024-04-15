@@ -3,6 +3,7 @@
 This project is a clone of the YouTube front page, designed using HTML, CSS, and JavaScript. It includes features like a toggleable sidebar, search functionality, user options, and dynamically populated video content fetched from a JSON file.
 
 **Table of Contents**
+
 Demo
 Features
 Installation
