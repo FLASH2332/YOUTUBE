@@ -1,8 +1,8 @@
-##YouTube Clone Front Page
+**YouTube Clone Front Page**
 
 This project is a clone of the YouTube front page, designed using HTML, CSS, and JavaScript. It includes features like a toggleable sidebar, search functionality, user options, and dynamically populated video content fetched from a JSON file.
 
-##Table of Contents
+**Table of Contents**
 Demo
 Features
 Installation
@@ -13,7 +13,7 @@ Demo
 ![Youtube](https://github.com/FLASH2332/YOUTUBE/assets/148314235/2782d1b2-0e2c-45ea-9b9f-1f68a4c8c1df)
 
 
-##Features
+**Features**
 Responsive design resembling the YouTube front page.
 Toggleable sidebar for navigation.
 Search functionality with search bar and buttons.
@@ -33,15 +33,16 @@ Copy code
 cd youtube-clone
 Open the index.html file in your web browser to view the project.
 
-Usage
+**Usage**
 Toggle the sidebar by clicking on the toggle button in the navigation bar.
 Use the search bar to search for videos.
 Explore different sections in the sidebar for Home, Explore, Subscription, Library, History, and more.
 Click on video thumbnails or titles to view the video details.
-Credits
-Your Name - Developer
+**Credits**
+Jayadev - Developer
 OpenAI - AI assistance
-License
+Youtbe and git repositries-Assistance
+
 
 You can customize the sections, add more details, or include links to your actual project files, GitHub profile, and other relevant resources. This README provides a basic structure to showcase your project and guide users on how to use and contribute to it.
 
