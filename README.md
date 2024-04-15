@@ -14,13 +14,16 @@ Demo
 
 
 **Features**
+
 Responsive design resembling the YouTube front page.
 Toggleable sidebar for navigation.
 Search functionality with search bar and buttons.
 User options with icons for notifications, grid view, and video upload.
 Dynamic loading of video content from a JSON file.
 Hover effects and interactive elements for improved user experience.
-Installation
+
+**Installation**
+
 Clone the repository:
 
 bash
@@ -34,11 +37,14 @@ cd youtube-clone
 Open the index.html file in your web browser to view the project.
 
 **Usage**
+
 Toggle the sidebar by clicking on the toggle button in the navigation bar.
 Use the search bar to search for videos.
 Explore different sections in the sidebar for Home, Explore, Subscription, Library, History, and more.
 Click on video thumbnails or titles to view the video details.
+
 **Credits**
+
 Jayadev - Developer
 OpenAI - AI assistance
 Youtbe and git repositries-Assistance
