@@ -51,8 +51,10 @@ Click on video thumbnails or titles to view the video details.
 **Credits**
 
 Jayadev - Developer
+
 OpenAI - AI assistance
-Youtbe and git repositries-Assistance
+
+Youtube and git repositries-Assistance
 
 
 You can customize the sections, add more details, or include links to your actual project files, GitHub profile, and other relevant resources. This README provides a basic structure to showcase your project and guide users on how to use and contribute to it.
