@@ -3,14 +3,16 @@ const sidebar = document.querySelector('.side-bar');
 const linkTexts = document.querySelectorAll('.link-text');
 const linkers=document.getElementsByClassName("links")
 sidebar.classList.toggle('show');
+var clicked=false;
 toggleBtn.addEventListener('click', () => {
+    clicked=!clicked;
     linkTexts.forEach(linkText => {
         linkText.classList.toggle('show-text');
     });
-    linkers.forEach(link => {
-        link.classList.toggle('hover-effect');
-    });
-});
+    document.getElementById("cover").classList.toggle("show");
+    
+}
+);
 let lastLoadedIndex = 0; 
 const videosPerPage = 12; 
 
@@ -23,7 +25,7 @@ window.addEventListener('scroll', () => {
 });
 
 const loadMoreVideos = () => {
-    fetch('data/videos.json')
+    fetch('PUBLIC/data/videos.json')
         .then(response => response.json())
         .then(videoData => {
             const totalVideos = videoData.length;
@@ -43,7 +45,6 @@ const loadMoreVideos = () => {
         });
 };
 
-// Initial loading of videos
 loadMoreVideos();
 
 
@@ -66,4 +67,25 @@ const makeVideoCard = (data) => {
     </div>`;
 };
 const videoContainer = document.getElementById('video-section');
+
+
+videoContainer.addEventListener('click', () => {
+    if(clicked===true){
+    linkTexts.forEach(linkText => {
+        linkText.classList.toggle('show-text');
+        
+    });
+    clicked=false;
+}
+});
+
+document.getElementById("cover").addEventListener('click', () => {
+    if(clicked==true){
+        document.getElementById("cover").classList.toggle("show");
+        linkTexts.forEach(linkText => {
+            linkText.classList.toggle('show-text');
+        });
+        clicked=false;
+    }
+});
 
