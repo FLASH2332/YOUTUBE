@@ -10,11 +10,12 @@
     padding: 0 2.5vw;
     justify-content: flex-start;
     z-index: 2;
+    margin-bottom: 0%;
 }
 .toggle-btn{
     width: 20px;
     height: 10px;
-    position: relative;
+    position: fixed;
     cursor: pointer;
 }
 
@@ -44,16 +45,24 @@
 
 .side-bar.show {
     transform: translateX(0);
+    top: 60px;
 }
-
-
+.side-bar{
+    position: fixed;
+    top: 60px;
+    left: 0;
+    z-index: 100;
+    height: calc(100vh - 58px);
+    background: #fff;
+}
 .logo{
     height: 30px;
-    margin: -10px 30px 0;
+    margin: -10px 40px 0 ;
+    cursor: pointer;
 }
 
-.search-box{
-    margin-left: 250px;
+.search-box {
+    margin-left: auto;
     position: relative;
     max-width: 500px;
     width: 50%;
@@ -61,7 +70,7 @@
     display: flex;
 }
 
-.search-bar{
+.search-bar {
     width: 85%;
     height: 100%;
     border: 2px solid #dbdbdb;
@@ -71,7 +80,7 @@
     border-radius: 15px 0 0 15px;
 }
 
-.search-btn{
+.search-btn {
     width: 15%;
     height: 38px;
     background: #f0f0f0;
@@ -79,25 +88,24 @@
     padding: 5px;
     border-left: none;
     border-radius: 0 15px 15px 0;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
 }
-.search-btn:hover{
+
+.search-btn:hover {
     background-color: rgb(226, 226, 226);
 }
-.search-btn  img{
-    height: 110%;
-    
+
+.search-btn img {
+    height: 100%;
 }
-#voice-search{
-    width: 15%;
-    height: 38px;
-    padding: 5px 0;
-    border: none;
-    background:white;
-}
-#voice-search img{
-    height: 110%;
-    border-radius: 50%;
-   
+@media screen and (max-width: 600px) {
+
+    .search-btn 
+        {
+        width: calc(35% - 2px);
+    }
 }
 
 .user-options{
@@ -110,10 +118,7 @@
     background: rgba(0, 0, 0, 0.1);
     border-radius: 50%;
 }
-#voice-search:hover{
-    background: rgba(0, 0, 0, 0.1);
-    border-radius: 50%;
-}
+
 
 .user-options .icon{
     height: 80%;
@@ -126,6 +131,7 @@
     height: 30px;
     width: 30px;
     margin-right:50px ;
+    margin-left: 10px;
 }
 
 .user-dp img{
@@ -134,15 +140,7 @@
     border: 2px lightskyblue solid;
 }
 
-.side-bar{
-    position: fixed;
-    top: 60px;
-    left: 0;
-    min-width: 20px;
-    z-index: 1;
-    height: calc(100vh - 60px);
-    background: #fff;
-}
+
 
 .links{
     display: block;
@@ -155,42 +153,46 @@
     font-size: 20px;
     font-weight: 500;
     text-decoration: none;
+    cursor: pointer;
 }
-
-
+.navbar.active,
+#video-section.active {
+    background-color: rgb(0, 0, 0); /* Adjust the opacity as needed */
+}
 
 .links:hover
 {
     background: rgba(0, 0, 0, 0.1);
 }
 .links img {
-    display: block; /* Ensure the icons are always visible */
+    display: block; 
     height: 25px;
     margin-right: 20px;
     visibility: visible;
 }
 
 .link-text {
-    display: none; /* Hide the text by default */
+    display: none; 
 }
-
 
 .show-text {
     display: block; 
-    /* Show the text when toggled */
     transition: 0.3ms;
+    
 }
+
 .seperator{
     border: none;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 #video-section { 
-	margin: 50px 0 0 50px; 
 	display: flex;  
-	padding: 20px 0 0 35px; 
+	padding: 20px 0 0 50px; 
     flex-direction: row; 
 	flex-wrap: wrap; 
-	justify-content: space-around; 
+	justify-content: space-between; 
+    width: 90%;
+    margin-left:4%;
 } 
 
 .video-container { 
@@ -199,12 +201,15 @@
     width: 295px; 
 	height: 200px; 
     padding:8px;
+    cursor: pointer;
+    
 } 
 
 .videos { 
 	width: 295px; 
 	height: 175px;
     margin-bottom: 5px;   
+    border-radius: 5%;
 } 
 
 .video-description { 
@@ -271,5 +276,20 @@
 	text-decoration: none; 
 	color: rgb(99, 95, 94); 
     margin:0px;
+}
+#cover {
+    position: fixed;
+    top: 60px; 
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 60px); 
+    background-color: black;
+    visibility: hidden;
+    z-index: 7;
+    opacity: 0.8;
+}
+
+#cover.show {
+    visibility: visible;
 }
 
