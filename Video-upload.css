@@ -1,0 +1,106 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#Input-details {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    width: 800px;
+    height: fit-content;
+    min-height: 600px;
+    border: 5px black solid;
+    align-items: center;
+}
+
+#Input-details input {
+    width: 250px;
+    box-sizing: border-box;
+    font-size: larger;
+    font-style: oblique;
+    align-items: center;
+    height: 30px;
+    border: 2px black solid;
+    border-radius: 5px;
+}
+#logo{
+    height: 100px;
+    width:300px;
+    margin-top: 50px;
+    justify-items: center;
+    align-content: center;
+}
+#logo img{
+    height: 100px;
+    width:275px;
+}
+#videotitle{
+    margin:50px 0 15px 0;
+}
+#video-file{
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    margin-left:20px;
+}
+#video-file input{
+    margin-left:15px;
+}
+#thumbnail{
+    margin-top: 8px;
+}
+#categories {
+    margin-top: 20px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    margin-left: 105px;
+}
+
+.category-list {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.category-list input {
+    padding: 5px;
+    margin-left: 5px;
+}
+#add-category-btn{
+    margin-left: 10px;
+}
+#upload-btn {
+    margin: 10px;
+    display: flex;
+    align-items: center;
+}
+
+#upload-btn button {
+    display: flex;
+    align-items: center;
+    border-radius:15px;
+}
+
+#upload-btn button img {
+    margin-right: 5px;
+}
+#message{
+    visibility: hidden;
+}
+#Description{
+    display:flex;
+    align-items: center;
+    margin-top: 10px;
+}
+#Description textarea{
+    min-width: 250px;
+    min-height: 50px;
+    box-sizing: border-box;
+    font-size: larger;
+    font-style: oblique;
+    align-items: center;
+    border: 2px black solid;
+    border-radius: 5px;
+}
