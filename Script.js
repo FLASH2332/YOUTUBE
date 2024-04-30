@@ -25,7 +25,7 @@ window.addEventListener('scroll', () => {
 });
 
 const loadMoreVideos = () => {
-    fetch('PUBLIC/data/videos.json')
+    fetch('public/data/videos.json')
         .then(response => response.json())
         .then(videoData => {
             const totalVideos = videoData.length;
