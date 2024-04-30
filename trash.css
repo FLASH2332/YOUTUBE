@@ -1,3 +1,6 @@
+body{
+    margin: 0;
+}
 .navbar{
     position: fixed;
     top: 0;
@@ -8,9 +11,9 @@
     display: flex;
     align-items: center;
     padding: 0 2.5vw;
-    justify-content: flex-start;
+    align-items: center;
     z-index: 2;
-    margin-bottom: 0%;
+    justify-content: space-between;
 }
 .toggle-btn{
     width: 20px;
@@ -38,23 +41,7 @@
 .toggle-btn:hover{
     background-color: #dddcdc;
 }
-.side-bar {
-    transform: translateX(-100%);
-    transition: transform 0.3s ease;
-}
 
-.side-bar.show {
-    transform: translateX(0);
-    top: 60px;
-}
-.side-bar{
-    position: fixed;
-    top: 60px;
-    left: 0;
-    z-index: 100;
-    height: calc(100vh - 58px);
-    background: #fff;
-}
 .logo{
     height: 30px;
     margin: -10px 40px 0 ;
@@ -62,7 +49,6 @@
 }
 
 .search-box {
-    margin-left: auto;
     position: relative;
     max-width: 500px;
     width: 50%;
@@ -95,6 +81,7 @@
 
 .search-btn:hover {
     background-color: rgb(226, 226, 226);
+    cursor: pointer;
 }
 
 .search-btn img {
@@ -111,14 +98,12 @@
 .user-options{
     height: 35px;
     display: flex;
-    margin-left: auto;
     align-items: center;
 }
 .user-options .icon:hover{
     background: rgba(0, 0, 0, 0.1);
     border-radius: 50%;
 }
-
 
 .user-options .icon{
     height: 80%;
@@ -135,12 +120,11 @@
 }
 
 .user-dp img{
+    height: 30%;
     object-fit: cover;
     border-radius: 30px;
-    border: 2px lightskyblue solid;
+    border: 1px rgb(0, 4, 249) solid;
 }
-
-
 
 .links{
     display: block;
@@ -154,10 +138,12 @@
     font-weight: 500;
     text-decoration: none;
     cursor: pointer;
+    transform: translateX(-5%);
+    transition:  transform 0.3s ease;
 }
 .navbar.active,
 #video-section.active {
-    background-color: rgb(0, 0, 0); /* Adjust the opacity as needed */
+    background-color: rgb(0, 0, 0);
 }
 
 .links:hover
@@ -172,74 +158,90 @@
 }
 
 .link-text {
-    display: none; 
+    display: none;
+}
+
+
+.side-bar {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+.side-bar.show {
+    transform: translateX(0);
+    top: 60px;
+}
+
+.side-bar{
+    position: fixed;
+    top: 60px;
+    left: 0;
+    z-index: 100;
+    height: calc(100vh - 58px);
+    background: #fff;
 }
 
 .show-text {
     display: block; 
-    transition: 0.3ms;
-    
-}
-
-.seperator{
-    border: none;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 #video-section { 
-	display: flex;  
-	padding: 20px 0 0 50px; 
+	display: flex;
     flex-direction: row; 
 	flex-wrap: wrap; 
-	justify-content: space-between; 
-    width: 90%;
-    margin-left:4%;
-} 
+    width: calc(100% - 100px);
+    margin: 0;
+    margin-top:60px;
+    transform: translateX(100px);
+}
 
 .video-container { 
-	margin-top: 20px; 
-	margin-bottom: 40px;
-    width: 295px; 
-	height: 200px; 
-    padding:8px;
+	height:275px;
     cursor: pointer;
-    
+    min-width: 250px;
+    min-height: 225px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    flex-grow: 1;
 } 
 
 .videos { 
-	width: 295px; 
-	height: 175px;
-    margin-bottom: 5px;   
-    border-radius: 5%;
+	width: 90%; 
+	height: 65%;
+    max-width: 350px;   
+    border-radius:5%;
 } 
 
 .video-description { 
 	display: flex; 
 	flex-direction: row; 
-    height: 75px;
-    margin-bottom: 10px;
-} 
+    height: 30%;
+    width: 90%;
+    max-width: 350px;
+}
 
 .channel-dp-container-2 { 
-	height: 35px; 
-	width: 35px; 
+	height:80%; 
+	width: 20%; 
 	border-radius: 50%; 
 	display: inline-block; 
     justify-self: flex-start; 
 } 
 
 .channel-dp-2 { 
-	height: 100%; 
-	width: 100%; 
+	height: 80%; 
+	width: 80%; 
 	border-radius: 50%; 
 	object-fit: cover; 
 } 
 
 .video-details { 
-    width: 200px; 
-	margin-top: 3px; 
-	margin-left: 10px; 
-	justify-self: flex-end;
-    margin-bottom: 3px;
+    width: 80%; 
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 2%;
 } 
 
 .video-title { 
@@ -266,17 +268,16 @@
 	text-decoration: none; 
 } 
 
-.fa-circle { 
-	color: rgb(99, 95, 94); 
-	font-size: 2px; 
-	transform: translateY(-3px); 
-} 
-
 .time { 
 	text-decoration: none; 
 	color: rgb(99, 95, 94); 
     margin:0px;
 }
+.seperator{
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
 #cover {
     position: fixed;
     top: 60px; 
