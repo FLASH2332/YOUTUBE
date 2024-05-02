@@ -25,13 +25,16 @@
             <div id="categories">
                 <label for="category-input">Categories :</label>
                 <div class="category-list">
-                    <input id="category-input" type="text" placeholder="Enter categories">
+                    <input class="category-input" type="text" placeholder="Enter categories">
                 </div>
                 <button type="button" id="add-category-btn">Add Category</button>
             </div>
             <div id="Description">
                 <label for="DescriptionInput">Description:</label>
                 <textarea id="DescriptionInput" maxlength="500"></textarea>
+            </div>
+            <div id="hidden">
+                <input type="text" hidden id="details">
             </div>
             <div id="upload-btn">
                 <button type="submit"><img src="public/images/images/upload.png">Upload</button>
@@ -41,53 +44,8 @@
             </div>
         </div>
     </form>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const form = document.getElementById('Video-upload');
-            const uploadBtn = document.querySelector('#upload-btn button');
-            const message = document.getElementById('message');
-
-            form.addEventListener('submit', function (event) {
-                event.preventDefault();
-
-                const uploadSuccessful = Math.random() < 0.5;
-
-                if (uploadSuccessful) {
-                    uploadBtn.style.background = 'green'; 
-                    message.style.visibility = 'visible'; 
-                    message.textContent = 'Upload Successful';
-                } else {
-                    message.style.visibility = 'visible'; 
-                    message.textContent = 'Upload Unsuccessful';
-                }
-            });
-        });
-        document.addEventListener('DOMContentLoaded', function () {
-            const addCategoryBtn = document.getElementById('add-category-btn');
-            const categoryList = document.querySelector('.category-list');
-
-            console.log(addCategoryBtn);
-            console.log(categoryList);
-
-            addCategoryBtn.addEventListener('click', function () {
-                console.log('Button clicked');
-                const newCategoryInput = document.createElement('input');
-                newCategoryInput.type = 'text';
-                newCategoryInput.placeholder = 'Enter categories';
-
-                if (categoryList) {
-                    categoryList.appendChild(newCategoryInput);
-                } else {
-                    console.error('Category list not found');
-                }
-            });
-        });
-        const descriptionInput = document.getElementById('DescriptionInput');
-
-        descriptionInput.addEventListener('input', function() {
-            this.style.height = 'auto';
-            this.style.height = (this.scrollHeight) + 'px';
-        });
+    <script src="public/css,js/Video-upload.js">
+        
     </script>
 </body>
 </html>
