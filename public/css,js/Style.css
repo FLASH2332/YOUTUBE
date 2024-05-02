@@ -1,0 +1,296 @@
+body{
+    margin: 0;
+}
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    padding: 0 2.5vw;
+    align-items: center;
+    z-index: 2;
+    justify-content: space-between;
+}
+.toggle-btn{
+    width: 20px;
+    height: 10px;
+    position: fixed;
+    cursor: pointer;
+}
+
+.toggle-btn span{
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #979797;
+}
+
+.toggle-btn span:nth-child(1){
+    top: 0;
+}
+
+.toggle-btn span:nth-child(3){
+    top: 100%;
+}
+.toggle-btn:hover{
+    background-color: #dddcdc;
+}
+
+.logo{
+    height: 30px;
+    margin: -10px 40px 0 ;
+    cursor: pointer;
+}
+
+.search-box {
+    position: relative;
+    max-width: 500px;
+    width: 50%;
+    height: 35px;
+    display: flex;
+}
+
+.search-bar {
+    width: 85%;
+    height: 100%;
+    border: 2px solid #dbdbdb;
+    padding: 0 20px;
+    font-size: 16px;
+    text-transform: capitalize;
+    border-radius: 15px 0 0 15px;
+}
+
+.search-btn {
+    width: 15%;
+    height: 38px;
+    background: #f0f0f0;
+    border: 2px solid #dbdbdb;
+    padding: 5px;
+    border-left: none;
+    border-radius: 0 15px 15px 0;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+.search-btn:hover {
+    background-color: rgb(226, 226, 226);
+    cursor: pointer;
+}
+
+.search-btn img {
+    height: 100%;
+}
+@media screen and (max-width: 600px) {
+
+    .search-btn 
+        {
+        width: calc(35% - 2px);
+    }
+}
+
+.user-options{
+    height: 35px;
+    display: flex;
+    align-items: center;
+}
+.user-options .icon:hover{
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+}
+
+.user-options .icon{
+    height: 80%;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.user-dp{
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    margin-right:50px ;
+    margin-left: 10px;
+}
+
+.user-dp img{
+    height: 30%;
+    object-fit: cover;
+    border-radius: 30px;
+    border: 1px rgb(0, 4, 249) solid;
+}
+
+.links{
+    display: block;
+    min-width: fit-content;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+    color: #242424;
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: none;
+    cursor: pointer;
+    transform: translateX(-5%);
+    transition:  transform 0.3s ease;
+}
+.navbar.active,
+#video-section.active {
+    background-color: rgb(0, 0, 0);
+}
+
+.links:hover
+{
+    background: rgba(0, 0, 0, 0.1);
+}
+.links img {
+    display: block; 
+    height: 25px;
+    margin-right: 20px;
+    visibility: visible;
+}
+
+.link-text {
+    display: none;
+}
+
+
+.side-bar {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+.side-bar.show {
+    transform: translateX(0);
+    top: 60px;
+}
+
+.side-bar{
+    position: fixed;
+    top: 60px;
+    left: 0;
+    z-index: 100;
+    height: calc(100vh - 58px);
+    background: #fff;
+}
+
+.show-text {
+    display: block; 
+}
+#video-section { 
+	display: flex;
+    flex-direction: row; 
+	flex-wrap: wrap; 
+    width: calc(100% - 100px);
+    margin: 0;
+    margin-top:60px;
+    transform: translateX(100px);
+}
+
+.video-container { 
+	height:275px;
+    cursor: pointer;
+    min-width: 250px;
+    min-height: 225px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    flex-grow: 1;
+} 
+
+.videos { 
+	width: 90%; 
+	height: 65%;
+    max-width: 350px;   
+    border-radius:5%;
+} 
+
+.video-description { 
+	display: flex; 
+	flex-direction: row; 
+    height: 30%;
+    width: 90%;
+    max-width: 350px;
+}
+
+.channel-dp-container-2 { 
+	height:80%; 
+	width: 20%; 
+	border-radius: 50%; 
+	display: inline-block; 
+    justify-self: flex-start; 
+} 
+
+.channel-dp-2 { 
+	height: 80%; 
+	width: 80%; 
+	border-radius: 50%; 
+	object-fit: cover; 
+} 
+
+.video-details { 
+    width: 80%; 
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 2%;
+} 
+
+.video-title { 
+	font-weight: bold; 
+	text-decoration: none; 
+	color: black; 
+} 
+
+.channel-name { 
+	color: rgb(99, 95, 94); 
+	text-decoration: none; 
+	display: block; 
+	margin-top:0px;
+    margin-bottom: 0px; 
+} 
+
+.video-container :hover { 
+	color: rgb(53, 50, 49); 
+} 
+
+.views { 
+    margin: 0px;
+	color: rgb(99, 95, 94); 
+	text-decoration: none; 
+} 
+
+.time { 
+	text-decoration: none; 
+	color: rgb(99, 95, 94); 
+    margin:0px;
+}
+.seperator{
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+#cover {
+    position: fixed;
+    top: 60px; 
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 60px); 
+    background-color: black;
+    visibility: hidden;
+    z-index: 7;
+    opacity: 0.8;
+}
+
+#cover.show {
+    visibility: visible;
+}
+
