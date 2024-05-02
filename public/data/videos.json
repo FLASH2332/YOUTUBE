@@ -1,0 +1,269 @@
+[
+    {
+        "id": "public/images/images/thumbnail1.png",
+        "title": "Video 1 Title",
+        "channelName": "Channel 1",
+        "channelThumbnail":"public/images/images/Jack.png",
+        "views":"2M Views",
+        "time":"1 Year ago"
+    },
+    {
+        "id": "public/images/images/thumbnail2.png",
+        "title": "Video 2 Title",
+        "channelName": "Channel 2",
+        "channelThumbnail":"public/images/images/cameron.png",
+        "views":"2M Views",
+        "time":"1 Year ago"
+    },
+    {
+        "id": "public/images/images/thumbnail3.png",
+        "title": "Video 1 Title",
+        "channelName": "Channel 1",
+        "channelThumbnail":"public/images/images/megan.png",
+        "views":"2M Views",
+        "time":"1 Year ago"
+    },
+    {
+        "id": "public/images/images/thumbnail4.png",
+        "title": "Video 2 Title",
+        "channelName": "Channel 2",
+        "channelThumbnail":"public/images/images/gerard.png",
+        "views":"2M Views",
+        "time":"1 Year ago"
+    },
+    {
+        "id": "PUBLIC/IMAGES/IMAGES/thumbnail5.png",
+        "title": "Video 1 Title",
+        "channelName": "Channel 1",
+        "channelThumbnail":"public/images/images/Jack.png",
+        "views":"2M Views",
+        "time":"1 Year ago"
+    },
+    
+    {
+        "id": "public/images/images/thumbnail6.png",
+        "title": "Video 1 Title",
+        "channelName": "Channel 1",
+        "channelThumbnail":"public/images/images/megan.png",
+        "views":"2M Views",
+        "time":"1 Year ago"
+    },
+    {
+        "id": "public/images/images/thumbnail7.png",
+        "title": "Video 2 Title",
+        "channelName": "Channel 2",
+        "channelThumbnail":"public/images/images/cameron.png",
+        "views":"2M Views",
+        "time":"1 Year ago"
+    },{
+        "id": "public/images/images/thumbnail8.png",
+        "title": "Video 1 Title",
+        "channelName": "Channel 1",
+        "channelThumbnail":"public/images/images/megan.png",
+        "views":"2M Views",
+        "time":"1 Year ago"
+
+    },
+    {
+        "id": "PUBLIC/IMAGES/IMAGES/thumbnail1.png",
+        "title": "Video 1 Title",
+        "channelName": "Channel 1",
+        "channelThumbnail":"public/images/images/Jack.png",
+        "views":"2M Views",
+        "time":"1 Year ago"
+    },
+    {
+        "id": "public/images/images/thumbnail2.png",
+        "title": "Video 2 Title",
+        "channelName": "Channel 2",
+        "channelThumbnail":"public/images/images/gerard.png",
+        "views":"2M Views",
+        "time":"1 Year ago"
+    },
+    {
+        "id": "public/images/images/thumbnail3.png",
+        "title": "Video 1 Title",
+        "channelName": "Channel 1",
+        "channelThumbnail":"public/images/images/megan.png",
+        "views":"2M Views",
+        "time":"1 Year ago"
+    },
+    {
+        "id": "public/images/images/thumbnail4.png",
+        "title": "Video 2 Title",
+        "channelName": "Channel 2",
+        "channelThumbnail":"public/images/images/Jack.png",
+        "views":"2M Views",
+        "time":"1 Year ago"
+    },
+    {
+        "id": "PUBLIC/IMAGES/IMAGES/thumbnail5.png",
+        "title": "Video 1 Title",
+        "channelName": "Channel 1",
+        "channelThumbnail":"public/images/images/cameron.png",
+        "views":"2M Views",
+        "time":"1 Year ago"
+    },
+    {
+        "id": "public/images/images/thumbnail6.png",
+        "title": "Video 2 Title",
+        "channelName": "Channel 2",
+        "channelThumbnail":"public/images/images/Jack.png",
+        "views":"2M Views",
+        "time":"1 Year ago"
+    },
+    {
+        "id": "public/images/images/thumbnail7.png",
+        "title": "Video 1 Title",
+        "channelName": "Channel 1",
+        "channelThumbnail":"public/images/images/Jack.png",
+        "views":"2M Views",
+        "time":"1 Year ago"
+    },
+    {
+        "id": "public/images/images/thumbnail8.png",
+        "title": "Video 2 Title",
+        "channelName": "Channel 2",
+        "channelThumbnail":"public/images/images/gerard.png",
+        "views":"2M Views",
+        "time":"1 Year ago"
+    },
+    {
+        "id": "PUBLIC/IMAGES/IMAGES/thumbnail1.png",
+        "title": "Video 1 Title",
+        "channelName": "Channel 1",
+        "channelThumbnail":"public/images/images/cameron.png",
+        "views":"2M Views",
+        "time":"1 Year ago"
+    },
+    {
+        "id": "public/images/images/thumbnail2.png",
+        "title": "Video 2 Title",
+        "channelName": "Channel 2",
+        "channelThumbnail":"public/images/images/megan.png",
+        "views":"2M Views",
+        "time":"1 Year ago"
+    },
+    {
+        "id": "public/images/images/thumbnail3.png",
+        "title": "Video 1 Title",
+        "channelName": "Channel 1",
+        "channelThumbnail":"public/images/images/Jack.png",
+        "views":"2M Views",
+        "time":"1 Year ago"
+    },
+    {
+        "id": "public/images/images/thumbnail4.png",
+        "title": "Video 2 Title",
+        "channelName": "Channel 2",
+        "channelThumbnail":"public/images/images/gerard.png",
+        "views":"2M Views",
+        "time":"1 Year ago"
+    },
+    {
+        "id": "PUBLIC/IMAGES/IMAGES/thumbnail5.png",
+        "title": "Video 1 Title",
+        "channelName": "Channel 1",
+        "channelThumbnail":"public/images/images/cameron.png",
+        "views":"2M Views",
+        "time":"1 Year ago"
+    },
+    
+    {
+        "id": "public/images/images/thumbnail6.png",
+        "title": "Video 1 Title",
+        "channelName": "Channel 1",
+        "channelThumbnail":"public/images/images/Jack.png",
+        "views":"2M Views",
+        "time":"1 Year ago"
+    },
+    {
+        "id": "public/images/images/thumbnail7.png",
+        "title": "Video 2 Title",
+        "channelName": "Channel 2",
+        "channelThumbnail":"public/images/images/cameron.png",
+        "views":"2M Views",
+        "time":"1 Year ago"
+    },{
+        "id": "public/images/images/thumbnail8.png",
+        "title": "Video 1 Title",
+        "channelName": "Channel 1",
+        "channelThumbnail":"public/images/images/megan.png",
+        "views":"2M Views",
+        "time":"1 Year ago"
+
+    },
+    {
+        "id": "PUBLIC/IMAGES/IMAGES/thumbnail1.png",
+        "title": "Video 1 Title",
+        "channelName": "Channel 1",
+        "channelThumbnail":"public/images/images/gerard.png",
+        "views":"2M Views",
+        "time":"1 Year ago"
+    },
+    {
+        "id": "public/images/images/thumbnail2.png",
+        "title": "Video 2 Title",
+        "channelName": "Channel 2",
+        "channelThumbnail":"public/images/images/Jack.png",
+        "views":"2M Views",
+        "time":"1 Year ago"
+    },
+    {
+        "id": "public/images/images/thumbnail3.png",
+        "title": "Video 1 Title",
+        "channelName": "Channel 1",
+        "channelThumbnail":"public/images/images/cameron.png",
+        "views":"2M Views",
+        "time":"1 Year ago"
+    },
+    {
+        "id": "public/images/images/thumbnail4.png",
+        "title": "Video 2 Title",
+        "channelName": "Channel 2",
+        "channelThumbnail":"public/images/images/gerard.png",
+        "views":"2M Views",
+        "time":"1 Year ago"
+    },
+    {
+        "id": "PUBLIC/IMAGES/IMAGES/thumbnail5.png",
+        "title": "Video 1 Title",
+        "channelName": "Channel 1",
+        "channelThumbnail":"public/images/images/cameron.png",
+        "views":"2M Views",
+        "time":"1 Year ago"
+    },
+    {
+        "id": "public/images/images/thumbnail6.png",
+        "title": "Video 2 Title",
+        "channelName": "Channel 2",
+        "channelThumbnail":"public/images/images/Jack.png",
+        "views":"2M Views",
+        "time":"1 Year ago"
+    },
+    {
+        "id": "public/images/images/thumbnail7.png",
+        "title": "Video 1 Title",
+        "channelName": "Channel 1",
+        "channelThumbnail":"public/images/images/megan.png",
+        "views":"2M Views",
+        "time":"1 Year ago"
+    },
+    {
+        "id": "public/images/images/thumbnail8.png",
+        "title": "Video 2 Title",
+        "channelName": "Channel 2",
+        "channelThumbnail":"public/images/images/cameron.png",
+        "views":"2M Views",
+        "time":"1 Year ago"
+    },
+    {
+        "id": "PUBLIC/IMAGES/IMAGES/thumbnail1.png",
+        "title": "Video 1 Title",
+        "channelName": "Channel 1",
+        "channelThumbnail":"public/images/images/gerard.png",
+        "views":"2M Views",
+        "time":"1 Year ago"
+    }
+    
+]
