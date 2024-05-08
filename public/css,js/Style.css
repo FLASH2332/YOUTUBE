@@ -1,5 +1,6 @@
 body{
     margin: 0;
+    align-items: center;
 }
 .navbar{
     position: fixed;
@@ -125,7 +126,10 @@ body{
     border-radius: 30px;
     border: 1px rgb(0, 4, 249) solid;
 }
-
+a{
+    color:black;
+    text-decoration: none;
+}
 .links{
     display: block;
     min-width: fit-content;
@@ -183,6 +187,27 @@ body{
 
 .show-text {
     display: block; 
+    transform: translateX(0);
+    transition:text 1s ease;
+}
+
+@media  screen and (max-width:1500px) {
+    .video-container{
+        max-width:400px ;
+        background-color: aqua;
+    }
+}
+@media  screen and (max-width:1135px) {
+    .video-container{
+        max-width:450px ;
+        background-color: aquamarine;
+    }
+}
+@media  screen and (max-width:795px) {
+    .video-container{
+        max-width: 600px;
+        background-color: blue;
+    }
 }
 #video-section { 
 	display: flex;
@@ -190,26 +215,26 @@ body{
 	flex-wrap: wrap; 
     width: calc(100% - 100px);
     margin: 0;
-    margin-top:60px;
+    margin-top:80px;
     transform: translateX(100px);
+    transition: Width 0.3s ease;
+    justify-content: flex-start;
 }
 
 .video-container { 
-	height:275px;
+    width:300px ; 
     cursor: pointer;
-    min-width: 250px;
-    min-height: 225px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    flex-grow: 1;
+    flex-grow:1;
 } 
+
 
 .videos { 
 	width: 90%; 
-	height: 65%;
-    max-width: 350px;   
+	height: 65%;  
     border-radius:5%;
 } 
 
@@ -218,7 +243,6 @@ body{
 	flex-direction: row; 
     height: 30%;
     width: 90%;
-    max-width: 350px;
 }
 
 .channel-dp-container-2 { 
