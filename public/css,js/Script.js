@@ -2,17 +2,52 @@ const toggleBtn = document.getElementById('toggleBtn');
 const sidebar = document.querySelector('.side-bar');
 const linkTexts = document.querySelectorAll('.link-text');
 const linkers=document.getElementsByClassName("links")
+const videoContainer = document.getElementById('video-section');
+const videocard=document.getElementsByClassName('video-container');
+var temp=window.innerWidth>800 ? false : true;
+
+
 sidebar.classList.toggle('show');
 var clicked=false;
 toggleBtn.addEventListener('click', () => {
-    clicked=!clicked;
+    clicked=true;
     linkTexts.forEach(linkText => {
         linkText.classList.toggle('show-text');
     });
     document.getElementById("cover").classList.toggle("show");
-    
+    if(window.innerWidth<800){
+    sidebar.classList.toggle("show");
 }
-);
+console.log(temp);
+
+console.log(clicked);
+}
+);window.addEventListener('resize', () => {
+    if (window.innerWidth < 800 && !temp) {
+        sidebar.classList.remove('show');
+        linkTexts.forEach(linkText => {
+            linkText.classList.remove('show-text');
+        });
+        document.getElementById("cover").classList.remove("show");
+        temp = true;
+    } else if (window.innerWidth >= 800 && temp) {
+        sidebar.classList.add('show');
+        temp = false;
+    }
+});
+
+
+document.getElementById("cover").addEventListener('click', () => {
+    if(clicked==true){
+        document.getElementById("cover").classList.toggle("show");
+        linkTexts.forEach(linkText => {
+            linkText.classList.toggle('show-text');
+        });
+        clicked=false;
+    }
+});
+
+
 let lastLoadedIndex = 0; 
 const videosPerPage = 12; 
 
@@ -66,26 +101,17 @@ const makeVideoCard = (data) => {
     </div>
     </div>`;
 };
-const videoContainer = document.getElementById('video-section');
 
 
-videoContainer.addEventListener('click', () => {
-    if(clicked===true){
-    linkTexts.forEach(linkText => {
-        linkText.classList.toggle('show-text');
+
+// videoContainer.addEventListener('click', () => {
+//     if(clicked===true){
+//     linkTexts.forEach(linkText => {
+//         linkText.classList.toggle('show-text');
         
-    });
-    clicked=false;
-}
-});
+//     });
+//     clicked=false;
+// }
+// });
 
-document.getElementById("cover").addEventListener('click', () => {
-    if(clicked==true){
-        document.getElementById("cover").classList.toggle("show");
-        linkTexts.forEach(linkText => {
-            linkText.classList.toggle('show-text');
-        });
-        clicked=false;
-    }
-});
 
