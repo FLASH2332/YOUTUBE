@@ -2,8 +2,9 @@
 <html>
     <head>
         <title>Youtube</title>
-        <link rel="stylesheet" href="public/css,js/Style.css">
-        <link rel="icon" type="image/x-icon" href="public/images/icons/favicon.ico">
+        <link rel="stylesheet" href="/static/css,js/Style.css">
+        <link rel="stylesheet" href="/static/css,js/common.css">
+        <link rel="icon" type="image/x-icon" href="/static/images/icons/favicon.ico">
     </head>
     <body>
         <nav class="navbar">
@@ -12,35 +13,53 @@
                 <span></span>
                 <span></span>
             </div>
-            <img src="public/images/icons/logo.PNG" class="logo" alt="logo">
-            <div class="search-box">
+            <img src="/static/images/icons/logo.png" class="logo" alt="logo">
+            <div class="search-box" title="Search Box">
                 <input type="text" class="search-bar" placeholder="search">
-                <button class="search-btn"><img src="public/images/icons/search.PNG" alt="Search"></button>
+                <button class="search-btn"><img src="/static/images/icons/search.PNG" alt="Search"></button>
+            </div>
+            <div id="theme">
+                <input type="checkbox" class="checkbox" id="navbar-theme">  
             </div>
             <div class="user-options">
+                <a href="channel.html">
                 <div class="user-dp">
-                    <a href="channel.html"><img src="public/images/icons/profile-pic.png" class="icon" alt="User"></a>
+                    <a href="/youtube-clone/<%= userid %>/channels/<%= userid %>"><img src="/static/images/icons/profile-pic.png" class="icon" alt="User" title="Your Profile"></a>
                 </div>
+                </a>
             </div>
+
         </nav>
-        <div class="side-bar close">
-            <div class="links"><img src="public/images/icons/home.PNG" alt=""><span class="link-text">Home</span></div>
-            <div class="links"><img src="public/images/icons/explore.PNG" alt=""><span class="link-text">explore</span></div>
-            <div class="links"><img src="public/images/icons/subscription.PNG" alt=""><span class="link-text">subscription</span></div>
-            <hr class="seperator">
-            <div class="links"><img src="public/images/icons/library.PNG" alt=""><span class="link-text">Library</span></div>
-            <div class="links"><img src="public/images/icons/history.PNG" alt=""><span class="link-text">History</span></div>
-            <div class="links"><img src="public/images/icons/your-video.PNG" alt=""><span class="link-text">Your Video</span></div>
-            <div class="links"><img src="public/images/icons/watch-later.PNG" alt=""><span class="link-text">Watch Later</span></div>
-            <div class="links"><img src="public/images/icons/liked video.PNG" alt=""><span class="link-text">Liked Videos</span></div>
-            <div class="links"><img src="public/images/icons/show more.PNG" alt=""><span class="link-text">Show More</span></div>
+        <div class="side-bar">
+            <a href="Index.html">
+                <div class="links">
+                    <img src="/static/images/icons/home.PNG" alt="Home" title="Home">
+                    <span class="link-text">Home</span>
+                </div>
+            </a>
+            <hr class="separator">
+            <a href="Subscription.html">
+                <div class="links">
+                    <img src="/static/images/icons/subscription.PNG" alt="Subscription" title="Subscriptions">
+                    <span class="link-text">Subscriptions</span>
+                </div>
+            </a>
+            <a href="channel.html">
+                <div class="links">
+                    <img src="/static/images/icons/your-video.PNG" alt="Your Video" title="Your Video">
+                    <span class="link-text">Your Video</span>
+                </div>
+            </a>
+            <div id="theme">
+                <input type="checkbox" class="checkbox" id="insidebar-theme">
+            </div>
         </div>
+        
+        
         <div id="cover" class="Cover"><p>kkk</p></div>
         <main id="video-section">
         </main>
-        <script src="public/css,js/Script.js">
-
-        </script>
-        
+        <script src="/static/css,js/common.js"></script>
+        <script src="/static/css,js/Script.js"></script> 
     </body>
 </html>
