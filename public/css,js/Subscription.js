@@ -1,38 +1,14 @@
-const toggleBtn = document.getElementById('toggleBtn');
-const sidebar = document.querySelector('.side-bar');
-const linkTexts = document.querySelectorAll('.link-text');
-const linkers=document.getElementsByClassName("links")
-sidebar.classList.toggle('show');
-var clicked=false;
-toggleBtn.addEventListener('click', () => {
-    clicked=!clicked;
-    linkTexts.forEach(linkText => {
-        linkText.classList.toggle('show-text');
-    });
-    document.getElementById("cover").classList.toggle("show");
-    
-}
-);
 const channelContainer = document.getElementById('channel-section');
 
 
-channelContainer.addEventListener('click', () => {
-    if(clicked===true){
-    linkTexts.forEach(linkText => {
-        linkText.classList.toggle('show-text');
-        
-    });
-    clicked=false;
-}
-});
+let lastLoadedIndex = 0; 
+const channelsPerPage = 6; 
 
-document.getElementById("cover").addEventListener('click', () => {
-    if(clicked==true){
-        document.getElementById("cover").classList.toggle("show");
-        linkTexts.forEach(linkText => {
-            linkText.classList.toggle('show-text');
-        });
-        clicked=false;
+window.addEventListener('scroll', () => {
+    const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
+
+    if (scrollTop + clientHeight >= scrollHeight - 200) {
+        loadMorechannels();
     }
 });
 
@@ -52,16 +28,6 @@ const subscriptioncard =(data) =>{
 }
 
 
-let lastLoadedIndex = 0; 
-const channelsPerPage = 6; 
-
-window.addEventListener('scroll', () => {
-    const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
-
-    if (scrollTop + clientHeight >= scrollHeight - 200) {
-        loadMorechannels();
-    }
-});
 const loadMorechannels = () => {
     fetch('public/data/subscriptions.json')
         .then(response => response.json())
@@ -84,4 +50,8 @@ const loadMorechannels = () => {
 };
 
 loadMorechannels();
+
+
+
+
 
