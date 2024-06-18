@@ -1,0 +1,86 @@
+:root {
+    --title:      rgb(0,0,0);
+    --text:       gray;
+}
+
+.dark-theme{
+    --title: rgb(227, 227, 227);
+}
+
+/* -----Main Part of this Page------ */
+
+#channel-section{
+    display: flex;
+    flex-direction: column; 
+	flex-wrap: wrap; 
+    width: calc(100% - 100px);
+    margin-top:60px;
+    margin-bottom: 2%;
+    transform: translateX(100px);
+    align-items: flex-start;
+    justify-content: center;
+}
+.subscription-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 200px;
+    flex-grow: 1;
+    margin-left: 2%;
+    margin-top: 2%;
+    min-height: 50px;
+}
+.details{
+    display: flex;
+    flex-direction: column;
+    height:100%;
+    justify-content: center;
+}
+.profile-pic{
+    border-radius: 50%;
+    height: 75%;
+    position: relative;
+    margin-left:10%;
+    margin-right:10%;
+}
+.channel-name{
+    font-size: larger;
+    margin: 0%;
+    color: var(--title);
+}
+.views{
+    color: var(--text);
+    margin: 0%;
+}
+.subscription-container .details .description {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width:75%;
+    font-size:medium;
+    color: var(--text);
+}
+
+.subscriber-count{
+    color: var(--title);
+}
+
+.count{
+    margin:0%;
+    padding: 0%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+@media screen and (max-width:800px){
+    #channel-section{
+        width:100%;
+        transform: translateX(0px);
+    }
+}
+
+
+
