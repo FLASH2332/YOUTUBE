@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Youtube</title>
+    <link rel="icon" type="image/x-icon" href="/static/images/icons/favicon.ico">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="/static/css,js/search/VideoSearchedPage.css">
+    <link rel="stylesheet" href="/static/css,js/common.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="toggle-btn" id="toggleBtn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <img src="/static/images/icons/logo.png" class="logo" alt="logo">
+        <div class="search-box" title="Search Box">
+            <input type="text" class="search-bar" placeholder="search">
+            <button class="search-btn"><img src="/static/images/icons/search.PNG" alt="Search"></button>
+        </div>
+        <div id="theme">
+            <input type="checkbox" class="checkbox" id="navbar-theme">
+        </div>
+        <div class="user-options">
+            <a href="/youtube-clone/<%= currentuserid %>/channels/<%= currentuserid %>">
+                <div class="user-dp">
+                    <img src="<%= selfprofilepic %>" class="icon" alt="User" title="Your Profile">
+                </div>
+            </a>
+        </div>
+
+    </nav>
+    <div class="side-bar">
+        <a href="/youtube-clone/<%= currentuserid %>">
+            <div class="links">
+                <img src="/static/images/icons/home.PNG" alt="Home" title="Home">
+                <span class="link-text">Home</span>
+            </div>
+        </a>
+        <hr class="separator">
+        <a href="/youtube-clone/<%= currentuserid %>/subscriptions">
+            <div class="links">
+                <img src="/static/images/icons/subscription.PNG" alt="Subscription" title="Subscriptions">
+                <span class="link-text">Subscriptions</span>
+            </div>
+        </a>
+        <a href="/youtube-clone/<%= currentuserid %>/channels/<%= currentuserid %>">
+            <div class="links">
+                <img src="/static/images/icons/your-video.PNG" alt="Your Video" title="Your Video">
+                <span class="link-text">Your Video</span>
+            </div>
+        </a>
+        <div id="theme">
+            <input type="checkbox" class="checkbox" id="insidebar-theme">
+        </div>
+    </div>
+
+
+    <div id="cover" class="Cover">
+        <p>kkk</p>
+    </div>
+
+    <div id="content">
+        <div id="subContent">
+
+            <% for (let video of searchresult[0]) { %>
+                <div class="subscription-container">
+                    <img onclick='window.location = "/youtube-clone/<%= currentuserid %>/channels/<%= video.userid %>"' class="profile-pic" src='<%= video.channelprofilepic %>'>
+                    <div class="details">
+                        <p class="channel-name">
+                            <b style="font-size: 30px;"><%= video.channelname %></b>
+                        </p>
+                        <div class="count">
+                            <!--<div class="views"><%=  %> views</div>&nbsp;•&nbsp;-->
+                            <div class="subscriber-count">
+                                <%= video.channelsubscribers %> subscribers
+                            </div>
+                        </div>
+                        <div class="description">
+                            <p>
+                                <%= video.channeldescription %>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <% } %>
+
+
+                    <% for (let video of searchresult[1]) { %>
+                        <div class="videoTag">
+                            <a href="/youtube-clone/<%= searchresult[2] %>/videos/<%= video._id %>"><img
+                                    src="<%= video.thumbnail %>"></a>
+                            <div class="videoInfo">
+                                <a class="Title" href="/youtube-clone/<%= searchresult[2] %>/videos/<%= video._id %>">
+                                    <p>
+                                        <%= video.videotitle %>
+                                    </p>
+                                </a>
+                                <a class="subInfo" style="font-size: 30px;"
+                                    href="/youtube-clone/<%= searchresult[2] %>/channels/<%= video.userid %>">
+                                    <p>
+                                        <%= video.channel %>
+                                    </p>
+                                </a>
+                                <div class="bottomVideoInfo">
+                                    <p style="font-size: 20px;" class="subInfo bottomInfo">
+                                        <%= video.views %> views
+
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <% } %>
+        </div>
+    </div>
+
+    </div>
+    <script src="/static/css,js/search/VideoSearchedPage.js"></script>
+    <script src="/static/css,js/common.js"></script>
+</body>
+
+</html>

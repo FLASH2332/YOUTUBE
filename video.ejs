@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Youtube</title>
+    <link rel="icon" type="image/x-icon" href="/static/images/icons/favicon.ico">
+    <link rel="stylesheet" href="/static/css,js/video/BasePageStyle.css">
+    <link rel="stylesheet" href="/static/css,js/common.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="toggle-btn" id="toggleBtn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <img src="/static/images/icons/logo.png" class="logo" alt="logo">
+        <div class="search-box" title="Search Box">
+            <input type="text" class="search-bar" placeholder="search">
+            <button class="search-btn"><img src="/static/images/icons/search.PNG" alt="Search"></button>
+        </div>
+        <div id="theme">
+            <input type="checkbox" class="checkbox" id="navbar-theme">
+        </div>
+        <div class="user-options">
+            <a href="/youtube-clone/<%= currentuserid %>/channels/<%= currentuserid %>">
+                <div class="user-dp">
+                    <img src="<%= video.selfprofilepic %>" class="icon" alt="User" title="Your Profile">
+                </div>
+            </a>
+        </div>
+
+    </nav>
+    <div class="side-bar">
+        <a href="/youtube-clone/<%= currentuserid %>">
+            <div class="links">
+                <img src="/static/images/icons/home.PNG" alt="Home" title="Home">
+                <span class="link-text">Home</span>
+            </div>
+        </a>
+        <hr class="separator">
+        <a href="/youtube-clone/<%= currentuserid %>/subscriptions">
+            <div class="links">
+                <img src="/static/images/icons/subscription.PNG" alt="Subscription" title="Subscriptions">
+                <span class="link-text">Subscriptions</span>
+            </div>
+        </a>
+        <a href="/youtube-clone/<%= currentuserid %>/channels/<%= currentuserid %>">
+            <div class="links">
+                <img src="/static/images/icons/your-video.PNG" alt="Your Video" title="Your Video">
+                <span class="link-text">Your Video</span>
+            </div>
+        </a>
+        <div id="theme">
+            <input type="checkbox" class="checkbox" id="insidebar-theme">
+        </div>
+    </div>
+
+
+    <div id="cover" class="Cover">
+        <p>kkk</p>
+    </div>
+
+    <div id="content">
+        <div id="mainContent">
+            <div id="mainVideo">
+                <div class="video-container">
+                    <% console.log(video.thumbnail); %>
+                        <img src="<%= video.thumbnail %>" id="video-thumbnail">
+                        <video id="video">
+                            <source src="<%= video.video %>" type="video/mp4">
+                        </video>
+                        <div id="screen">
+                            <div id="videoCover"><span></span></div>
+                            <div class="controls">
+                                <div id="top">
+                                    <div class="playback-line">
+                                        <div class="progress-bar"></div>
+                                    </div>
+                                </div>
+                                <div id="bottom">
+                                    <div class="left">
+                                        <button id="skipminus-10" class="fa-solid fa-backward">
+                                            <img title="Rewind 10"
+                                                src="data:image/png;base64,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">
+                                        </button>
+                                        <button id="play-pause" class="fa-solid fa-play">
+                                            <i><img title="Play" id="pbutton"
+                                                    src="data:image/png;base64,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">
+                                            </i>
+                                        </button>
+                                        <button id="skip-10" class="fa-solid fa-forward">
+                                            <i><img title="Skip 10"
+                                                    src="data:image/png;base64,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"></i>
+                                        </button>
+                                        <div class="video-timer">
+                                            <span id="current-time">00:00</span>
+                                            <span id="separator">/</span>
+                                            <span id="max-duration">00:00</span>
+                                        </div>
+                                        <div class="volume-container">
+                                            <div>
+                                                <button id="mute">
+                                                    <img src="/static/IMAGES/IMAGES/download (4).jpg">
+                                                    <i class="fas fa-volume-up"></i>
+                                                </button>
+                                            </div>
+                                            <input type="range" id="volume" min="0" max="1" step="0.01" value="1">
+                                        </div>
+                                    </div>
+                                    <div class="right">
+                                        <button id="fullscreen">
+                                            <img title="Fullscreen" id="fullscreenButton" src="/static/IMAGES/IMAGES/download (3).jpg"/>
+                                            <i class="fa-solid fa-backward"><img title="Fullscreen"
+                                                    id="fullscreenButton" src="" /></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+            <div id="description">
+                <div id="mainVideoInfo">
+                    <h1 id="mainVideoTitle">
+                        <%= video.videotitle %>
+                    </h1>
+                    <div>
+                        <div id="videoProfile">
+                            <img style="cursor: pointer;" onclick='window.location = "/youtube-clone/<%= currentuserid %>/channels/<%= video.userid %>"' src="<%= video.channelprofilepic %>" />
+                            <p><span id="mainChannelName">
+                                    <%= video.channelname %>
+                                </span><br /><span id="mainSubscribers">
+                                    <%= video.channelsubs %> subscribers
+                                </span></p>
+                            <% if (currentuserid !==video.userid) {%>
+                                <div id="subscribe"><button type="button" id="subscribeButton">Subscribe</button></div>
+                                <% } %>
+                        </div>
+                        <% if (currentuserid !==video.userid) {%>
+                            <div id="likeDislike">
+                                <button type="button" id="likeButton"><img src="/static/images/icons/liked video.png" />
+                                    <span id="likes">
+                                        <%= video.likes %>
+                                    </span>
+                                </button>
+                                <button type="button" id="dislikeButton"><img
+                                        src="/static/images/icons/liked video.png" /><span id="likes">
+                                        <%= video.dislikes %>
+                                    </span></button>
+                            </div>
+                            <% } %>
+                    </div>
+                </div>
+                <div id="descriptionMain">
+                    <p><span id="videoViews">
+                            <%= video.views %> views
+                        </span><span> </span><span id="videoTime">DATE</span></p>
+                    <p id="videoTags">
+                        <% for (let tag of video.tags) { %>
+                            #<%= tag %>
+                                <% } %>
+                    </p>
+                    <p id="descriptionText">
+                        <%= video.description %>
+                    </p>
+                    <button id="descriptionExtend" type="button">Show more</button>
+                </div>
+            </div>
+            <hr />
+            <div id="toggleComments">
+                <button id="commentsToggle" type="button">Comments</button>
+            </div>
+            <div id="comments">
+                <div class="comment addComment">
+                    <div class="commentProfilePic">
+                        <img src="">
+                    </div>
+                    <div class="commentDetails">
+                        <form onsubmit="return addCommentP(event)" action="" method="post">
+
+                            <!--<input contenteditable="true" id="submittedComment" type="text" id="fname" maxlength="150" placeholder="Add a comment...." name="user_text">-->
+                            <span contenteditable="true" id="submittedComment">Add a comment....</span>
+                            <button type="submit">Submit</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="commentSeparator"></div>
+            </div>
+        </div>
+        <div id="subContent">
+            <% for (let video of sideVideos) { %>
+                <div class="videoTag">
+                    <a href="/youtube-clone/<%= currentuserid %>/videos/<%= video._id %>"><img
+                            src="<%= video.thumbnail %>"></a>
+                    <div class="videoInfo">
+                        <a class="Title" href="/youtube-clone/<%= currentuserid %>/videos/<%= video._id %>">
+                            <p>
+                                <%= video.videotitle %>
+                            </p>
+                        </a>
+                        <a class="subInfo" href="/youtube-clone/<%= currentuserid %>/channels/<%= video.userid %>">
+                            <p>
+                                <%= video.channelname %>
+                            </p>
+                        </a>
+                        <div class="bottomVideoInfo">
+                            <p class="subInfo bottomInfo">
+                                <%= video.views %> views
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <% } %>
+        </div>
+    </div>
+
+    </div>
+    <script src="/static/css,js/video/BasePage.js"></script>
+</body>
+
+</html>
