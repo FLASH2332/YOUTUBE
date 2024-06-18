@@ -52,6 +52,9 @@ Click on video thumbnails or titles to view the video details.
 **Credits**
 
 Jayadev - Developer
+Ashwin  - Devoloper
+Harish  - Developer
+Balaji  - Developer
 
 OpenAI - AI assistance
 
