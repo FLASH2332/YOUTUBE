@@ -1,0 +1,79 @@
+html {
+    scroll-behavior: smooth; /* Enables smooth scrolling for anchor links */
+}
+
+#scroll-down-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#scroll-down-btn:hover {
+    background-color: #0056b3;
+}
+
+#content {
+    height: 100vh; /* Ensures there's enough space to scroll */
+}
+
+#target-section {
+    padding: 50px;
+    background-color: #f9f9f9;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(to right, #348f50, #56b4d3);
+}
+
+h1 {
+    color: #EDE574;
+    margin-bottom: 20px;
+}
+
+p {
+    color: #6c5338;
+    font-size: 18px;
+    text-align: center;
+    margin: 0 20px 20px 20px;
+    max-width: 600px;
+}
+
+#donate-button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.qr-code {
+    margin-top: 20px;
+}
+
+.qr-code img {
+    width: 200px;
+    height: 200px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
