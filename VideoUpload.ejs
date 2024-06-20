@@ -4,14 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/static/css,js/channel/Video-upload.css">
 </head>
 <body>
-    <form action="/upload" method="POST" enctype="multipart/form-data">
-        <label for="title">Video title</label>
-        <input type="text" name="videotitle" id="title">
-        <label for="video">Video</label>
-        <input id="video" type="file" name="video" accept="video/*" required>
-        <button type="submit">Upload</button>
+    <form id="Video-upload" action="/youtube-clone/<%= userid %>/uploadvideo" method="POST" enctype="multipart/form-data">
+        <div id="Input-details">
+            <div id="logo"><img src="/static/images/images/youtubeIcon.png"></div>
+            <div id="video-title">
+                <label for="videotitle">Video title :</label>
+                <input id="videotitle" type="text" name="videotitle" id="videotitle" required/>
+            </div>
+            <div id="video-file">
+                <label for="video-file">Video :</label>
+                <input id="video-file-input" type="file" name="videoFile" accept="video/*" required />
+            </div>
+            <div id="thumbnail">
+                <label for="thumbnail">Thumbnail :</label>
+                <input id="thumbnail" type="file" name="imageFile" accept="image/*" required/>
+            </div>
+            <div id="categories">
+                <label for="category-input">Categories :</label>
+                <div class="category-list">
+                    <input class="category-input" type="text" placeholder="Enter categories">
+                </div>
+                <button type="button" id="add-category-btn">Add Category</button>
+            </div>
+            <div id="Description">
+                <label for="DescriptionInput">Description:</label>
+                <textarea id="DescriptionInput" name="description" maxlength="500"></textarea>
+            </div>
+            <div id="hidden">
+                <input type="text" name="tags" hidden id="details">
+            </div>
+            <div id="upload-btn">
+                <button type="submit"><img src="/static/images/images/upload.png">Upload</button>
+            </div>
+            <div id="message">
+                <span>Upload Successful</span>
+            </div>
+        </div>
     </form>
+    <script src="/static/css,js/channel/Video-upload.js">
+        
+    </script>
 </body>
 </html>
