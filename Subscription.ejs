@@ -1,66 +1,87 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Youtube</title>
-        <link rel="stylesheet" href="public/css,js/Subscription.css">
-        <link rel="stylesheet" href="public/css,js/common.css">
-    </head>
-    <body>
-        <nav class="navbar">
-            <div class="toggle-btn" id="toggleBtn">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <img src="/static/images/icons/logo(1).png" class="logo" alt="logo">
-            <div class="search-box" title="Search Box">
-                <input type="text" class="search-bar" placeholder="search">
-                <button class="search-btn"><img src="/static/images/icons/search.PNG" alt="Search"></button>
-            </div>
-            <div id="theme">
-                <input type="checkbox" class="checkbox" id="navbar-theme">  
-            </div>
-            <div class="user-options">
-                <a href="channel.html">
-                <div class="user-dp">
-                    <a href="/youtube-clone/<%= userid %>/channels/<%= userid %>"><img src="/static/images/icons/profile-pic.png" class="icon" alt="User" title="Your Profile"></a>
-                </div>
-                </a>
-            </div>
 
-        </nav>
-        <div class="side-bar">
-            <a href="Index.html">
-                <div class="links">
-                    <img src="public/images/icons/home.PNG" alt="Home" title="Home">
-                    <span class="link-text">Home</span>
+<head>
+    <title>Youtube</title>
+    <link rel="stylesheet" href="/static/css,js/subscription/Subscription.css">
+    <link rel="stylesheet" href="/static/css,js/common.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="toggle-btn" id="toggleBtn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <img src="/static/images/icons/logo.png" class="logo" alt="logo">
+        <div class="search-box" title="Search Box">
+            <input type="text" class="search-bar" placeholder="search">
+            <button class="search-btn"><img src="/static/images/icons/search.PNG" alt="Search"></button>
+        </div>
+        <div id="theme">
+            <input type="checkbox" class="checkbox" id="navbar-theme">
+        </div>
+        <div class="user-options">
+            <a>
+                <div class="user-dp">
+                    <a href="/youtube-clone/<%= userid %>/channels/<%= userid %>"><img
+                            src="<%= selfprofilepic %>" class="icon" alt="User" title="Your Profile"></a>
                 </div>
             </a>
-            <hr class="separator">
-            <a href="Subscription.html">
-                <div class="links">
-                    <img src="public/images/icons/subscription.PNG" alt="Subscription" title="Subscriptions">
-                    <span class="link-text">Subscriptions</span>
+        </div>
+
+    </nav>
+    <div class="side-bar">
+        <a href="/youtube-clone/<%= userid %>">
+            <div class="links">
+                <img src="/static/images/icons/home.PNG" alt="Home" title="Home">
+                <span class="link-text">Home</span>
+            </div>
+        </a>
+        <hr class="separator">
+        <a href="/youtube-clone/<%= userid %>/subscriptions">
+            <div class="links">
+                <img src="/static/images/icons/subscription.PNG" alt="Subscription" title="Subscriptions">
+                <span class="link-text">Subscriptions</span>
+            </div>
+        </a>
+        <a href="/youtube-clone/<%= userid %>/channels/<%= userid %>">
+            <div class="links">
+                <img src="/static/images/icons/your-video.PNG" alt="Your Video" title="Your Video">
+                <span class="link-text">Your Video</span>
+            </div>
+        </a>
+        <div id="theme">
+            <input type="checkbox" class="checkbox" id="insidebar-theme">
+        </div>
+    </div>
+
+
+    <div id="cover" class="Cover">
+        <p>kkk</p>
+    </div>
+    <main id="channel-section">
+        <% for (let subscribedchannel of subscribedchannels) { %>
+        <div style="cursor: pointer;" onclick='window.location = "/youtube-clone/<%= userid %>/channels/<%= subscribedchannel._id %>"' class="subscription-container">
+            <img class="profile-pic" src='<%= subscribedchannel.profilepic %>'>
+            <div class="details">
+                <b><p style="font-size: 30px;" class="channel-name"><%= subscribedchannel.username %></p></b>
+                <div class="count">
+                    <!--<div class="views">${data.views}</div>&nbsp;•&nbsp;--><div class="subscriber-count"><%= subscribedchannel.subscribers %> subscribers
+                    </div>
                 </div>
-            </a>
-            <a href="channel.html">
-                <div class="links">
-                    <img src="public/images/icons/your-video.PNG" alt="Your Video" title="Your Video">
-                    <span class="link-text">Your Video</span>
+                <div class="description">
+                    <p><%= subscribedchannel.description %></p>
                 </div>
-            </a>
-            <div id="theme">
-                <input type="checkbox" class="checkbox" id="insidebar-theme">
             </div>
         </div>
-        
-        
-        <div id="cover" class="Cover"><p>kkk</p></div>
-        <main id="channel-section">
+        <% } %>
 
-        </main>
-        <script src="public/css,js/common.js"></script>
-        <script src="public/css,js/Subscription.js">
-        </script>
-    </body>
+    </main>
+    <script src="/static/css,js/common.js"></script>
+    <script src="/static/css,js/subscription/Subscription.js">
+    </script>
+</body>
+
 </html>
