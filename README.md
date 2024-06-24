@@ -1,4 +1,4 @@
-**YouTube Clone Front Page**
+**YouTube Clone Page**
 
 This project is a clone of the YouTube front page, designed using HTML, CSS, and JavaScript. It includes features like a toggleable sidebar, search functionality, user options, and dynamically populated video content fetched from a database stored(MongoDB).
 
@@ -25,7 +25,7 @@ Responsive design resembling the YouTube front page.
 Toggleable sidebar for navigation.
 Search functionality with search bar and buttons.
 User options with icons for notifications, grid view, and video upload.
-Dynamic loading of video content from a JSON file.
+Dynamic loading of video content from a database.
 Hover effects and interactive elements for improved user experience.
 
 **Installation**
