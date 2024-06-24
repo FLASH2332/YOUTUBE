@@ -34,7 +34,7 @@ Clone the repository:
 
 bash
 Copy code
-git clone https://github.com/yourusername/youtube-clone.git
+git clone https://github.com/FLASH2332/YOUTUBE.git
 Navigate to the project directory:
 
 bash
@@ -63,7 +63,5 @@ OpenAI - AI assistance
 
 Youtube and git repositries-Assistance
 
-
-You can customize the sections, add more details, or include links to your actual project files, GitHub profile, and other relevant resources. This README provides a basic structure to showcase your project and guide users on how to use and contribute to it.
 
 "Feedback and suggestions are welcome! If you have any ideas for improvement or encounter any issues, feel free to open an issue or reach out to Your Name. Your input helps make this project better for everyone."
